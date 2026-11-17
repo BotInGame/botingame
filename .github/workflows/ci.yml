@@ -1,0 +1,40 @@
+# CI on every push and pull request: lint, the tests, and the built wheel installed and run in a clean environment.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run pytest
+
+  wheel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Build
+        run: uv build
+      - name: Smoke-test the wheel in a clean environment
+        run: |
+          cd "$RUNNER_TEMP"
+          printf 'def choose_move(view, legal_moves):\n    return legal_moves[0]\n' > bot.py
+          run() { uv run --isolated --no-project --with "$GITHUB_WORKSPACE"/dist/*.whl botingame "$@"; }
+          run --version
+          run play bot.py --game uttt --matches 2
+          run games --offline
+          run game connect4 --offline --no-pager | grep -q '^## The rules'

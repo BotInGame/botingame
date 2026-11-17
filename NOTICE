@@ -1,0 +1,36 @@
+botingame: the Game rules, the Bot SDK and the botingame CLI of BotInGame
+Copyright (C) 2026 BotInGame
+https://github.com/BotInGame/botingame
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option)
+any later version, with the additional term below.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details. You should have received a copy of the GNU General Public
+License along with this program (the LICENSE file). If not, see
+<https://www.gnu.org/licenses/>.
+
+Exception: starter code under 0BSD
+
+The reference Bots in examples/, the code samples in the Game guides
+(botingame/docs/<game>/guide.*.md) and the starter Bot file that
+`botingame new` writes (from botingame/cli/starter.py) are not under the GPL. They are under the
+BSD Zero Clause License (0BSD, text in examples/LICENSE), so they can be
+copied into a Bot of any licence, with no attribution required. The
+additional term below does not apply to them.
+
+Additional term, under section 7(b) of the GNU General Public License
+version 3:
+
+Any copy of this program, and any work based on it, must preserve this
+attribution notice, in this NOTICE file or an equivalent one:
+
+    Based on botingame by BotInGame (https://github.com/BotInGame/botingame)
+
+A work based on this program that displays Appropriate Legal Notices (as
+defined in the GNU General Public License) must include this attribution
+in them.
