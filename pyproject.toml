@@ -1,6 +1,6 @@
 [project]
 name = "botingame"
-version = "0.1.0.dev4"
+version = "0.1.0.dev5"
 description = "BotInGame: the Game rules, the Bot SDK and the botingame CLI"
 readme = "README.md"
 license = "GPL-3.0-or-later AND 0BSD"

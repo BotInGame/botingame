@@ -13,16 +13,6 @@ Contributions come in under the licence they go out under (inbound = outbound):
   `botingame/cli/starter.py`). What you contribute to them is under 0BSD, so anyone can copy it into a Bot of any
   licence.
 
-## Sign off your commits (DCO)
-
-Each commit must be signed off, certifying the [Developer Certificate of Origin](https://developercertificate.org/):
-that you wrote the change, or otherwise have the right to submit it under the licence above. Sign off with
-`git commit -s`, which adds a line with your name and email to the commit message:
-
-```
-Signed-off-by: Your Name <you@example.com>
-```
-
-Forgot it? `git commit --amend -s` fixes the last commit, `git rebase --signoff main` the whole branch.
+By opening a pull request, you confirm that you have the right to submit its code under these licences.
 
 Before you open a pull request, run the checks in the README's [Development](README.md#development) section.
