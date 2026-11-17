@@ -19,7 +19,7 @@ uv tool install git+https://github.com/BotInGame/botingame
 pipx install git+https://github.com/BotInGame/botingame
 ```
 
-Add `@<tag>` to the URL for a given release, for example `git+https://github.com/BotInGame/botingame@v0.1.0.dev3`.
+Add `@<tag>` to the URL for a given release, for example `git+https://github.com/BotInGame/botingame@v0.1.0.dev4`.
 Python 3.14 or newer is needed: uv fetches it if you don't have it, pipx needs it installed.
 
 Or clone it and work from the checkout:
