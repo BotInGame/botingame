@@ -141,6 +141,9 @@ et `{{example_move}}` est un coup légal.
 
 ## Depuis le code
 
+Les exemples de code de ce guide sont sous [0BSD](https://opensource.org/license/0bsd) : copiez-les dans n'importe quel
+Bot, sous n'importe quelle licence, sans mention requise.
+
 ### Avec le SDK Python
 
 `botingame new` écrit un Bot de départ comme celui-ci. Mettez le jeton de votre Bot dans `BOTINGAME_TOKEN` (ou dans un

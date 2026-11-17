@@ -31,9 +31,18 @@ def cli(*args, input=None):
     return runner.invoke(app, list(args), input=input)
 
 
-def test_version():
+def test_version_prints_the_version_first_then_the_legal_notices():
     r = cli("--version")
-    assert r.exit_code == 0 and r.output.strip() == f"botingame {botingame.__version__}"
+    assert r.exit_code == 0
+    assert r.output == (f"botingame {botingame.__version__}\n"
+                        "Based on botingame by BotInGame (https://github.com/BotInGame/botingame)\n"
+                        "Copyright (C) 2026 BotInGame. Free software under GPL-3.0-or-later;\n"
+                        "you may redistribute it under its terms. There is NO WARRANTY.\n")
+
+
+def test_help_lists_version_as_printing_the_legal_notices():
+    unwrapped = " ".join(cli("--help").output.replace("│", " ").split())
+    assert "--version Print the version, copyright and licence notices." in unwrapped
 
 
 @pytest.fixture
@@ -345,6 +354,11 @@ def test_new_writes_a_bot_that_plays_to_the_end_of_a_match(here, key):
         assert f"`{field}`" in bot, field  # the comments describe the view
     played = cli("play", f"bots/{key}.py", "--matches", "2")
     assert played.exit_code == 0 and sum(tally(played.output)) == 2, played.output
+
+
+def test_the_starter_bot_says_it_is_0bsd_on_its_first_line(here):
+    assert cli("new", "--game", "uttt", "--path", "b.py", "--token", "").exit_code == 0
+    assert (here / "b.py").read_text().splitlines()[0] == "# SPDX-License-Identifier: 0BSD"
 
 
 def test_with_every_flag_new_asks_nothing(here):

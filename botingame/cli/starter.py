@@ -34,6 +34,7 @@ VIEWS = {
 }
 
 TEMPLATE = '''\
+# SPDX-License-Identifier: 0BSD
 """A BotInGame Bot for {name}.
 
 Try it offline:          botingame play {path}

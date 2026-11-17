@@ -138,6 +138,9 @@ and `{{example_move}}` is one legal move: the cell it names also chooses where t
 
 ## Using it from code
 
+The code samples in this guide are under [0BSD](https://opensource.org/license/0bsd): copy them into any Bot, under any
+licence, no credit needed.
+
 ### With the Python SDK
 
 `botingame new` writes a starter Bot like this one. Put your Bot's token in `BOTINGAME_TOKEN` (or a `.env` file next
