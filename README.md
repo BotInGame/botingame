@@ -62,7 +62,7 @@ def choose_move(view, legal_moves):
 | `botingame play bot.py` | Offline Matches. `--game` (default: the file's `GAME`), `--vs random` or `--vs other_bot.py`, `--matches N` (alternating seats), `--seed`, `--show` (the board after every move), `--step` (one move per Enter, and a pause between Matches; `q` then Enter or Ctrl+C stops and still prints the tally; implies `--show`, needs a terminal) |
 | `botingame run bot.py` | Play ranked Series on the platform. Token from `--token`, else `BOTINGAME_TOKEN`, else `.env` in the current folder. `--series N` (default 1; 0: until Ctrl+C), always finishing the Series it is in, `--arena`. Shows each Match's link (`--web-url`), the opponent with its Elo and creator, your Elo and seat, the Series score, and your Elo change at the end of each Series |
 | `botingame health` | Check that the web app and the Bot API are up (exits 1 if either is down). `--web-url`, `--url` |
-| `botingame --version` | The package version |
+| `botingame --version` | The package version, then the copyright and licence notices |
 
 ### The Game menu
 
@@ -131,7 +131,8 @@ uv run ruff check .
 uv run pytest
 ```
 
-Bug reports and ideas: [GitHub Issues](https://github.com/BotInGame/botingame/issues).
+Bug reports and ideas: [GitHub Issues](https://github.com/BotInGame/botingame/issues). To contribute code, see
+[CONTRIBUTING.md](CONTRIBUTING.md): contributions come in under the same licence they go out under, signed off (DCO).
 
 ## License
 

@@ -69,15 +69,24 @@ def as_json(value) -> str:
     return json.dumps(value, indent=2)
 
 
+# The Appropriate Legal Notices (GPLv3 section 0), shown by `--version` only, the CLI's one listed option for them.
+# The first line is the attribution that NOTICE's section 7(b) term asks to keep in them.
+LEGAL_NOTICES = """\
+Based on botingame by BotInGame (https://github.com/BotInGame/botingame)
+Copyright (C) 2026 BotInGame. Free software under GPL-3.0-or-later;
+you may redistribute it under its terms. There is NO WARRANTY."""
+
+
 def show_version(value: bool):
     if value:
-        typer.echo(f"botingame {__version__}")
+        typer.echo(f"botingame {__version__}")  # first, alone on its line, for whatever parses it
+        typer.echo(LEGAL_NOTICES)
         raise typer.Exit()
 
 
 @app.callback()
 def main(version: Annotated[bool, typer.Option("--version", callback=show_version, is_eager=True,
-                                               help="Print the package version and exit.")] = False):
+                                               help="Print the version, copyright and licence notices.")] = False):
     pass
 
 
