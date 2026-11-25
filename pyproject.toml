@@ -1,10 +1,10 @@
 [project]
 name = "botingame"
-version = "0.1.0.dev5"
+version = "0.1.0.dev6"
 description = "BotInGame: the Game rules, the Bot SDK and the botingame CLI"
 readme = "README.md"
 license = "GPL-3.0-or-later AND 0BSD"
-license-files = ["LICENSE", "NOTICE", "examples/LICENSE"]
+license-files = ["LICENSE", "NOTICE", "LICENSES/0BSD.txt"]
 requires-python = ">=3.14"
 dependencies = [
     "httpx>=0.28.1",

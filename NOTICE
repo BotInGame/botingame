@@ -16,10 +16,10 @@ License along with this program (the LICENSE file). If not, see
 
 Exception: starter code under 0BSD
 
-The reference Bots in examples/, the code samples in the Game guides
-(botingame/docs/<game>/guide.*.md) and the starter Bot file that
-`botingame new` writes (from botingame/cli/starter.py) are not under the GPL. They are under the
-BSD Zero Clause License (0BSD, text in examples/LICENSE), so they can be
+The code samples in the Game guides (botingame/docs/<game>/guide.*.md)
+and the starter Bot file that `botingame new` writes (from
+botingame/cli/starter.py) are not under the GPL. They are under the
+BSD Zero Clause License (0BSD, text in LICENSES/0BSD.txt), so they can be
 copied into a Bot of any licence, with no attribution required. The
 additional term below does not apply to them.
 

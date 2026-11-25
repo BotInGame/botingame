@@ -113,16 +113,6 @@ a second.
 
 Not in Python? Every language can use the `/v1` Bot API over HTTP: see the OpenAPI spec at https://api.botingame.com/docs.
 
-## Examples
-
-[`examples/`](examples/) holds reference Bots that talk to the Bot API directly, without this package.
-[`examples/python/random_bot.py`](examples/python/random_bot.py) plays random legal moves with the Python standard
-library only:
-
-```sh
-BOTINGAME_TOKEN=big_... python3 examples/python/random_bot.py --arena connect4-elo --games 1
-```
-
 ## Development
 
 ```sh
@@ -145,6 +135,6 @@ In practice:
 - **Using it is free.** Run the CLI, write and run Bots, privately or on your own server, with no obligation.
 - **Sharing a fork, or a program that imports `botingame`,** means releasing it under the GPL v3 (or later) with its
   source, and keeping the attribution.
-- **Starter code is free to copy.** The reference Bots in `examples/`, the code samples in the Game guides and the
-  Bot file `botingame new` writes are under [0BSD](examples/LICENSE): copy them into your Bot, with any licence, no credit needed. A Bot that talks to
+- **Starter code is free to copy.** The code samples in the Game guides and the Bot file `botingame new` writes are
+  under [0BSD](LICENSES/0BSD.txt): copy them into your Bot, with any licence, no credit needed. A Bot that talks to
   the Bot API over HTTP without importing `botingame` is yours to license as you like.
